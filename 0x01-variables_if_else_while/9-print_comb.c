@@ -7,14 +7,14 @@
  */
 int main(void)
 {
-	int a,b;
+	int a, b;
 
 	for (a = 0; a < 10; a++)
 	{
-		putchar(a);
+		putchar('0' + a);
 		putchar(',');
 		for (b = 0; b < 10; b++)
-			putchar(b);
+			putchar('0' + b);
 	}
 	putchar('\n');
 	return (0);
