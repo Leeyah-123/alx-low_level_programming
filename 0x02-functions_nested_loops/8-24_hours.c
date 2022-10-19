@@ -1,7 +1,7 @@
 # include "main.h"
 
 /**
- * jack_bauer: Prints each minute of the day
+ * jack_bauer - Prints each minute of the day
  *
  * Return: void
  */
