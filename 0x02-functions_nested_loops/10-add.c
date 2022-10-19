@@ -13,13 +13,10 @@ int add(int a, int b)
 	sum = a + b;
 	if (sum < 10)
 	{
-		_putchar('0' + sum);
 		return sum;
 	}
 	else
 	{
-		_putchar('0' + (sum / 10));
-		_putchar('0' + (sum % 10));
 		return sum;
 	}
 	
