@@ -1,22 +1,22 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - causes an infinite loop
- * @i: i is an integer
- *
  * Return: 0
  */
 
 void positive_or_negative(int i)
 {
+	int i;
+
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
 
 	// while (i < 10)
-	{
-		putchar(i);
-	}
+	// {
+	//	putchar(i);
+	// }
 
 	printf("Infinite loop avoided! \\o/\n");
 
