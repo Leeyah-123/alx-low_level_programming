@@ -8,27 +8,29 @@
 
 void times_table(void)
 {
-	int time;
-	int index;
+	int row;
+	int column;
 	int result;
 
-	for (time = 0; time < 10; time++)
+	for (row = 0; row < 10; row++)
 	{
-		for (index = 0; index < 10; index++)
+		for (column = 0; column < 10; column++)
 		{
-			result = time * index;
+			result = row * column;
 			
 			if (result >= 10)
 			{
 				_putchar('0' + (result / 10));
 				_putchar('0' + (result % 10));
-				if (index != 9)
+				if (column != 9)
 					_putchar(',');
 			}
 			else
 			{
+				if (column > 1)
+					_putchar(' ');
 				_putchar('0' + result);
-				if (index != 9)
+				if (column != 9)
 					_putchar(',');
 				_putchar(' ');
 			}
