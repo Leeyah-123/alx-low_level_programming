@@ -11,31 +11,33 @@ void times_table(void)
 	int row;
 	int column;
 	int result;
+	int tens;
+	int ones;
 
 	for (row = 0; row < 10; row++)
 	{
 		for (column = 0; column < 10; column++)
 		{
 			result = row * column;
-			
-			if (result >= 10)
+			tens = result / 10;
+			ones = result % 10;
+
+			if (column == 0)
+				_putchar('0');
+			else if (result < 10)
 			{
-				_putchar('0' + (result / 10));
-				_putchar('0' + (result % 10));
-				if (column != 9)
-					_putchar(',');
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(ones + '0');
 			}
 			else
 			{
-				if (column > 1)
-					_putchar(' ');
-				_putchar('0' + result);
-				if (column != 9)
-					_putchar(',');
+				_putchar(',');
 				_putchar(' ');
+				_putchar(tens + '0');
+				_putchar(ones + '0');
 			}
-
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}
