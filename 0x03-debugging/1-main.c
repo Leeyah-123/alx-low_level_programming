@@ -1,14 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - causes an infinite loop
+ * @i: i is an integer
+ *
  * Return: 0
  */
 
-int main(void)
+void positive_or_negative(int i)
 {
-	int i;
-
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
