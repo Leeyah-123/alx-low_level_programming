@@ -2,8 +2,10 @@
 
 /**
  * add - Adds two integers
+ *@a: An integer
+ *@b: An integer
  *
- * Returns: Integer
+ * Return: Integer
  */
 
 int add(int a, int b)
@@ -11,13 +13,5 @@ int add(int a, int b)
 	int sum;
 
 	sum = a + b;
-	if (sum < 10)
-	{
-		return sum;
-	}
-	else
-	{
-		return sum;
-	}
-	
+	return (sum);	
 }
