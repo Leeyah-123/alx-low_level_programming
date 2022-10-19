@@ -22,15 +22,18 @@ void times_table(void)
 			{
 				_putchar('0' + (result / 10));
 				_putchar('0' + (result % 10));
+				if (index != 9)
+					_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 			}
 			else
 			{
 				_putchar('0' + result);
+				if (index != 9)
+					_putchar(',')
 			}
 
-			if (index != 9)
-				_putchar(',');
 			_putchar(' ');
 		}
 		_putchar('\n');
