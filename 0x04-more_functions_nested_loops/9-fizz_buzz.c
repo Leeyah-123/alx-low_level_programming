@@ -5,7 +5,6 @@
  *
  * Return: Always 0
  */
-
 int main(void)
 {
 	int i;
@@ -28,7 +27,7 @@ int main(void)
 		}
 		else
 		{
-			printf(" %d", n);
+			printf(" %d", i);
 		}
 	}
 	printf("\n");
