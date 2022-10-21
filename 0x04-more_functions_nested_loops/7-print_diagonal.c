@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print-diagonal - Prints a diagonal line
+ * print_diagonal - Prints a diagonal line
  * @n: An integer
  *
  * Return: no return
@@ -9,11 +9,11 @@
 
 void print_diagonal(int n)
 {
-	int num, inner_num;
+	int i, j;
 
-	for (num = 0; num < n; num++)
+	for (i = 0; i < n; i++)
 	{
-		for (inner_num = 0; inner_num < num; inner_num++)
+		for (j = 0; j < i; j++)
 		{
 			_putchar(' ');
 		}
