@@ -26,6 +26,5 @@ int _atoi(char *s)
 
 	if (sign == -1)
 		n = -n;
-	
 	return (n);
 }
