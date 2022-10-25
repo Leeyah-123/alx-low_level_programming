@@ -22,7 +22,7 @@ int _atoi(char *s)
 	n = 0;
 
 	for (c = offset; s[c] != '\0'; c++)
-		n = n * 10 + a[c] - '0';
+		n = n * 10 + s[c] - '0';
 
 	if (sign == -1)
 		n = -n;
