@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * strcpy - copies a string into a buffer
+ * _strcpy - copies a string into a buffer
  * @dest: destination
  * @src: source
  *
