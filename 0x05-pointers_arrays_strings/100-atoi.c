@@ -9,29 +9,23 @@
 
 int _atoi(char *s)
 {
-	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
+	int c, sign, offset, n;
 
-	while (*(s + count) != '\0')
-	{
-		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-			break;
+	if (s[0] == '-')
+		sign = -1;
 
-		if (*(s + count) == '-')
-			pn *= -1;
+	if (sign == -1)
+		offset = 1;
+	else
+		offset = 0;
 
-		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
-		{
-			if (size > 0)
-				m *= 10;
-			size++;
-		}
-		count++;
-	}
+	n = 0;
 
-	for (i = count - size; i < count; i++)
-	{
-		oi = oi + ((*(s + 1) - 48) * m);
-		m /= 10;
-	}
-	return (oi * pn);
+	for (c = offset; s[c] != '\0'; c++)
+		n = n * 10 + a[c] - '0';
+
+	if (sign == -1)
+		n = -n;
+	
+	return (n);
 }
