@@ -15,10 +15,5 @@ int _strcmp(char *s1, char *s2)
 		l1++;
 	while (s2[l2] != '\0')
 		l2++;
-	if (l1 > l2)
-		return (15);
-	else if (l2 > l1)
-		return (-15);
-	else
-		return (0);
+	return (l1 - l2);
 }
