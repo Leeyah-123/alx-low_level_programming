@@ -1,21 +1,21 @@
 #include "main.h"
 /**
  * string_toupper - Changes all lowercase letters to uppercase
- * @src: A string pointer
+ * @s: A string pointer
  *
  * Return: void
  */
 
-char *string_toupper(char *src)
+char *string_toupper(char *s)
 {
-	int length = 0, i;
+	int count = 0;
 
-	while (src[length])
-		length++;
-
-	for (i = 0; i <= length; i++)
+	while (*(s + count) != '\0')
 	{
-		if (src[length] && src[length] > 96 && src[length] < 123)
-			src[length] = src[length] - 32;
+		if ((*(s + count) >= 97) && (*(s + count) <= 122))
+			*(s + count) = *(s + count) - 32;
+		count++;
 	}
+
+	return (s);
 }
