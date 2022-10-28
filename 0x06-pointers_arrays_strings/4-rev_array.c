@@ -14,7 +14,7 @@ void reverse_array(int *a, int n)
 	while ((*(a + count)) != '\0')
 		count++;
 
-	for (i = 0; i <= count; i++)
+	for (i = 0; i < count; i++)
 	{
 		if (i > n)
 			break;
