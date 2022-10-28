@@ -19,6 +19,7 @@ char *rot13(char *s)
 			if (*(s + count) == alphabet[i])
 			{
 				*(s + count) = rot13[i];
+				break;
 			}
 		}
 		count++;
