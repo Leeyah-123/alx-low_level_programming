@@ -9,10 +9,10 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	int flag = 0;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	for (; *(s + i) != '\0'; i++)
 	{
 		if (*(s + i) == c)
 		{
@@ -23,4 +23,6 @@ char *_strchr(char *s, char c)
 
 	if (flag == 0)
 		return ('\0');
+	else
+		return (s + i);
 }
