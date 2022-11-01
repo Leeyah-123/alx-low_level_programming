@@ -21,15 +21,14 @@ unsigned int _strspn(char *s, char *accept)
 		for (; *(accept + j) != '\0'; j++)
 		{
 			if (*(s + i) == *(accept + j))
-				{
-					flag = 1;
-					length++;
-				}
+			{
+				flag = 1;
+				length++;
+			}
 		}
 		if (flag == 0)
 			break;
-		else
-			flag = 0;
+		flag = 0;
 	}
 	return (length);
 }
