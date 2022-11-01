@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 {
 	unsigned int i, s_len = 0, flag = 0;
 
-	while((*(s + s_len)) != '\0')
+	while ((*(s + s_len)) != '\0')
 		s_len++;
 
 	for (i = 0; i < s_len; i++)
@@ -24,5 +24,5 @@ char *_strchr(char *s, char c)
 	}
 
 	if (flag == 0)
-		return (NULL);
+		return ('\0');
 }
