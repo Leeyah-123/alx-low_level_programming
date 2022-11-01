@@ -10,19 +10,16 @@
 char *_strchr(char *s, char c)
 {
 	unsigned int i = 0;
-	unsigned int flag = 0;
 
 	for (; *(s + i) != '\0'; i++)
 	{
 		if (*(s + i) == c)
 		{
-			flag = 1;
 			return (s + i);
 		}
 	}
 
-	if (flag == 0)
+	if (*(s + i) == c)
 		return ('\0');
-	else
-		return (s + i);
+	return (s + i);
 }
