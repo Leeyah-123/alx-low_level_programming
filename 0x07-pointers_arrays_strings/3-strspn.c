@@ -11,24 +11,21 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0;
 	unsigned int j = 0;
-	unsigned int length = 0;
 	unsigned int flag = 0;
 
 	for (; *(s + i) != '\0'; i++)
 	{
-		if (*(s + i) == 32)
-			break;
+		flag = 1;
 		for (; *(accept + j) != '\0'; j++)
 		{
 			if (*(s + i) == *(accept + j))
 			{
-				flag = 1;
-				length++;
+				flag = 0;
+				break;
 			}
 		}
-		if (flag == 0)
+		if (flag == 1)
 			break;
-		flag = 0;
 	}
-	return (length);
+	return (i);
 }
