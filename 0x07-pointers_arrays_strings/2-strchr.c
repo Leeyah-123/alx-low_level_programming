@@ -23,6 +23,6 @@ char *_strchr(char *s, char c)
 		}
 	}
 
-	if (flag == 1)
+	if (flag == 0)
 		return (NULL);
 }
