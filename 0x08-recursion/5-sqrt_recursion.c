@@ -10,7 +10,7 @@
 
 int find_sqrt(int n, long int sqrt)
 {
-	if (sqrt > 2147483647)
+	if (sqrt > 2147483647 | n < 0)
 		return (-1);
 	if (sqrt * sqrt == n)
 		return (sqrt);
