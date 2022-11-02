@@ -8,7 +8,7 @@
  * Return: Integer
  */
 
-int find_sqrt(int n, int sqrt)
+int find_sqrt(int n, long long int sqrt)
 {
 	if (sqrt > 18446744073709551615)
 		return (-1);
