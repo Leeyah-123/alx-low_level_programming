@@ -24,11 +24,12 @@ int get_length(char *s)
 int palindrome(char *s, int i)
 {
 	int l = get_length(s) - 1;
+	_putchar('0' + get_length(s));
 
 	if ((l + 1) % 2 == 0 && (i + 1) > ((l + 1) / 2))
 		return (1);
 
-	if (*s == *(s + (get_length(s) - 1 - i)))
+	if (*s == *(s + (l - i)))
 	{
 		if (((l + 1) % 2 != 0) && ((i + 1) == (l + 1) / 2))
 			return (1);
