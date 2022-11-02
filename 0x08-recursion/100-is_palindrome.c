@@ -23,7 +23,7 @@ int get_length(char *s)
 
 int palindrome(char *s, int i)
 {
-	int l = get_length(s) - 1;
+	int l = get_length(s);
 
 	if (l % 2 != 0 && i > (l + 1) / 2)
 		return (1);
