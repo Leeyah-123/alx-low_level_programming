@@ -25,12 +25,12 @@ int palindrome(char *s, int i)
 {
 	int l = get_length(s) - 1;
 
-	if ((l + 1) % 2 == 0 && (i + 1) > (l + 1) / 2)
+	if ((l + 1) % 2 == 0 && (i + 1) > ((l + 1) / 2))
 		return (1);
 
 	if (*s == *(s + (l - i)))
 	{
-		if ((i + 1) == (l + 1) / 2)
+		if (((l + 1) % 2 != 0) && ((i + 1) == (l + 1) / 2))
 			return (1);
 		return (palindrome(s, i + 1));
 	}
