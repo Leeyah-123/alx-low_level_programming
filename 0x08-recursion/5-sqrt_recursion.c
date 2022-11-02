@@ -8,9 +8,9 @@
  * Return: Integer
  */
 
-int find_sqrt(int n, long long int sqrt)
+int find_sqrt(int n, long int sqrt)
 {
-	if (sqrt > 18446744073709551615)
+	if (sqrt > 2147483647)
 		return (-1);
 	if (sqrt * sqrt == n)
 		return (sqrt);
@@ -26,7 +26,7 @@ int find_sqrt(int n, long long int sqrt)
 
 int _sqrt_recursion(int n)
 {
-	unsigned long long int sqrt = 0;
+	long int sqrt = 0;
 
 	return (find_sqrt(n, sqrt));
 }
