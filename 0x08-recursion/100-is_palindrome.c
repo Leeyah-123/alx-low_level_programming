@@ -14,7 +14,7 @@ int get_length(char *s)
 }
 
 /**
- * palindrome - Checks if a number is a palindrome
+ * palindrome - Checks if a string is a palindrome
  * @s: Input string
  * @i: Current index
  *
@@ -23,14 +23,15 @@ int get_length(char *s)
 
 int palindrome(char *s, int i)
 {
-	int l = get_length(s) - 1;
+	int l = get_length(s);
+	int l2 = l - 1;
 
-	if ((l + 1) % 2 == 0 && (i + 1) > ((l + 1) / 2))
+	if (l % 2 == 0 && (i + 1) > (l / 2))
 		return (1);
 
-	if (*(s + i) == *(s + (l - i)))
+	if (*(s + i) == *(s + (l2 - i)))
 	{
-		if (((l + 1) % 2 != 0) && ((i + 1) == (l + 1) / 2))
+		if ((l % 2 != 0) && ((i + 1) == l / 2))
 			return (1);
 		return (palindrome(s, i + 1));
 	}
