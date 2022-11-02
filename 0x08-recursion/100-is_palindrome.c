@@ -10,7 +10,7 @@ int get_length(char *s)
 {
 	if (*s = '\0')
 	       return (0);
-	return (get_length(*(s + 1)) + 1);	
+	return (get_length(s + 1) + 1);	
 }
 
 /**
@@ -41,7 +41,7 @@ int palindrome(char *s, int i)
 
 int is_palindrome(char *s)
 {
-	if (*s = '\0')
+	if (*s == '\0')
 		return (1);
 	return (palindrome(s, 0));
 }
