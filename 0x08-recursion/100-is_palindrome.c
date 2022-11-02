@@ -41,6 +41,7 @@ int palindrome(char *s, int i)
 
 int is_palindrome(char *s)
 {
-	if (*s != *(s + (get_length(s) - 1))
+	if (*s = '\0')
+		return (1);
 	return (palindrome(s, 0));
 }
