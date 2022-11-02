@@ -11,7 +11,7 @@
 int find_prime(int n, int n2)
 {
 	if (n2 < 2)
-                return (1);
+		return (1);
 	if (n2 != 1 && n % n2 == 0)
 		return (0);
 	return (find_prime(n, n2 - 1));
