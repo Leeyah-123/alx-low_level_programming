@@ -1,6 +1,38 @@
 #include "main.h"
 
 /**
+ * get_length - Finds the length of a string
+ * @s: Input string
+ *
+ * Return: length of string
+ */
+int get_length(char *s)
+{
+	if (*s = '\0')
+	       return (0);
+	return (get_length(*(s + 1)) + 1);	
+}
+
+/**
+ * palindrome - Checks if a number is a palindrome
+ * @s: Input string
+ * @i: Current index
+ *
+ * Return: Integer
+ */
+
+int palindrome(char *s, int i)
+{
+	if (*s == *(s + (get_length(s) - i)))
+	{
+		if (i == (i / 2))
+			return (1);
+		return (palindrome(s, i + 1));
+	}
+	return (0);
+}
+
+/**
  * is_palindrome - Returns 1 if input string is a palindrome and 0 if not
  * @s: Input string
  *
@@ -9,5 +41,6 @@
 
 int is_palindrome(char *s)
 {
-	return (0);
+	if (*s != *(s + (get_length(s) - 1))
+	return (palindrome(s, 0));
 }
