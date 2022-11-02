@@ -30,7 +30,7 @@ int palindrome(char *s, int i)
 
 	if (*s == *(s + (l - i)))
 	{
-		if (i == (l + 1) / 2)
+		if ((i + 1) == (l + 1) / 2)
 			return (1);
 		return (palindrome(s, i + 1));
 	}
