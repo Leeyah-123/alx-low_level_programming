@@ -25,15 +25,16 @@ int palindrome(char *s, int i)
 {
 	int l = get_length(s);
 	int l2 = l - 1;
+	int i2 = i + 1;
 
-	if (l % 2 == 0 && (i + 1) > (l / 2))
+	if (l % 2 == 0 && i2 > (l / 2))
 		return (1);
 
 	if (*(s + i) == *(s + (l2 - i)))
 	{
-		if ((l % 2 != 0) && ((i + 1) == l / 2))
+		if ((l % 2 != 0) && (i2 == l / 2))
 			return (1);
-		return (palindrome(s, i + 1));
+		return (palindrome(s, i2));
 	}
 	return (0);
 }
