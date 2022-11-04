@@ -46,6 +46,8 @@ int calc_change(int cents, int change)
 
 int main(int argc, char *argv[])
 {
+	int num_coins;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -56,7 +58,8 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	else
 	{
-		printf("%d\n", calc_change(atoi(argv[1]), 25));
+		num_coins = calc_change(atoi(argv[1]), 25);
+		printf("%d\n", num_coins);
 	}
 	return (0);
 }
