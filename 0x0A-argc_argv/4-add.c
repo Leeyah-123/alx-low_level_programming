@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - Prints the name of a programme followed by a new line
  * @argc: Number of arguments passed to program
  * @argv: Arguments passed
  *
- * Return: Always 0 (Success)
+ * Return: 0 (Success), 1 (Error)
  */
 
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, num;
+	int sum = 0, i, j;
 
 	if (argc == 1)
 	{
@@ -20,13 +21,15 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			num = atoi(argv[i]);
-			if (num == 0)
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(argv[i][j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			sum += num;
+			sum += atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
