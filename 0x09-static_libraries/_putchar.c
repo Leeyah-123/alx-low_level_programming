@@ -1,8 +1,6 @@
 #include "main.h"
-#include <stdio.h>
 
-int _putchar(char c)
+int _putchar(char c __attribute__((unused)))
 {
-	putchar(c);
 	return (0);
 }
