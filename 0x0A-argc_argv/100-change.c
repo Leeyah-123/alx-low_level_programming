@@ -11,36 +11,27 @@
 
 int calc_change(int cents, int change)
 {
-	int next;
+	int next, i;
+	int coins[5] = {25, 10, 5, 2, 1};
+
+	for (i = 0; i < 5; i++)
+	{
+		if (change == coins[i])
+		{
+			next = coins[i + 1];
+			break;
+		}
+	}
 
 	if (cents == change)
 		return (1);
 	if (cents < change)
 	{
-		if (change == 25)
-			next = 10;
-		else if (change == 10)
-			next = 5;
-		else if (change == 5)
-			next = 2;
-		else
-			next = 1;
 		return (calc_change(cents, next));
 	}
 
 	if ((cents - change) > 0)
 		next = change;
-	else
-	{
-		if (change == 25)
-			next = 10;
-		else if (change == 10)
-			next = 5;
-		else if (change == 5)
-			next = 2;
-		else
-			next = 1;
-	}
 	return (calc_change(cents - change, next) + 1);
 }
 
