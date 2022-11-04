@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * main - Prints the name of a programme followed by a new line
  * @argc: Number of arguments passed to program
@@ -16,7 +15,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	printf("%d\n", (atoi(agrv[1]) * atoi(argv[2])));
+	printf("%d\n", (agrv[1]) * argv[2]);
 	return (0);
 }
 
