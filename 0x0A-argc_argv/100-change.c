@@ -2,40 +2,6 @@
 #include <stdlib.h>
 
 /**
- * calc_change - Calculate the minimum number of coins needed to make change
- * @cents: Amount of money
- * @change: Change
- *
- * Return: Number of change
- */
-
-int calc_change(int cents, int change)
-{
-	int next, i;
-	int coins[5] = {25, 10, 5, 2, 1};
-
-	for (i = 0; i < 5; i++)
-	{
-		if (change == coins[i])
-		{
-			next = coins[i + 1];
-			break;
-		}
-	}
-
-	if (cents == change)
-		return (1);
-	if (cents < change)
-	{
-		return (calc_change(cents, next));
-	}
-
-	if ((cents - change) > 0)
-		next = change;
-	return (calc_change(cents - change, next) + 1);
-}
-
-/**
  * main - Prints the minimum number of coins to
  * make change for an amount of money
  * @argc: Number of arguments passed to program
@@ -46,21 +12,36 @@ int calc_change(int cents, int change)
 
 int main(int argc, char *argv[])
 {
-	int num_coins;
+	int cents, num_coins = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
 	if (argv[1][0] == '-')
-		printf("0\n");
-	else
 	{
-		num_coins = calc_change(atoi(argv[1]), 25);
-		printf("%d\n", num_coins);
+		printf("0\n");
+		return (0);
 	}
+
+	cents = atoi(argv[1]);
+	while (cents > 0)
+	{
+		if (cents >= 25)
+			cents -= 25;
+		else if (cents >= 10)
+			cents -= 10;
+		else if (cents >= 5)
+			cents -= 5;
+		else if (cents >= 2)
+			cents -= 2;
+		else if (cents >= 1)
+			cents -= 1;
+		num_coins++;
+	}
+
+	printf("%d\n", num_coins);
 	return (0);
 }
 
