@@ -30,13 +30,15 @@ char *argstostr(int ac, char **av)
 	if (p == NULL)
 		return (NULL);
 
+	len = 0;
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			p[i + j] = av[i][j];
+			p[len] = av[i][j];
 			if (av[i][j + 1] == '\0')
-				p[i + j + 1] = '\n';
+				p[len + 1] = '\n';
+			len++;
 		}
 	}
 
