@@ -31,4 +31,6 @@ char *argstostr(int ac, char **av)
 				*(p + i + j + 1) = '\n';
 		}
 	}
+
+	return (p);
 }
