@@ -13,7 +13,7 @@ char **strtow(char *str)
 	char **p;
 	int n = 0, len = 0, i, j;
 
-	if (!*str || (*str == 32 && *(str + 1) == '\0') || *str == '\0')
+	if (!*str || (*str == 32 && str[1] != NULL) || *str == '\0')
 		return (NULL);
 
 	for (i = 0; *(str + i) != '\0'; i++)
