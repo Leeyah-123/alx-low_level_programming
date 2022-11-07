@@ -23,6 +23,9 @@ char **strtow(char *str)
 	n += 1;
 
 	p = (char **) malloc(sizeof(char *) * n);
+
+	if (p == NULL)
+		return (NULL);
 	
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
@@ -34,6 +37,9 @@ char **strtow(char *str)
 			len++;
 		}
 		*(p + i) = (char *) malloc((sizeof(char) * len) + 1);
+
+		if (*(p + i) == NULL)
+			return (NULL);
 
 		for (j = 0; *(str + i + j) != '\0'; j++)
 		{
