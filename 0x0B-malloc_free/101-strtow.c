@@ -26,14 +26,13 @@ char **strtow(char *str)
 
 	if (p == NULL)
 		return (NULL);
-	
+
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
 		for (j = 0; *(str + i + j) != '\0'; j++)
 		{
 			if (*(str + i + j) == ' ')
 				break;
-
 			len++;
 		}
 		*(p + i) = (char *) malloc((sizeof(char) * len) + 1);
@@ -47,6 +46,8 @@ char **strtow(char *str)
 				break;
 			p[i][j] = *(str + i + j);
 		}
+
+		len = 0;
 	}
 
 	return (p);
