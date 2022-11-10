@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _calloc - Allocates memory for an array and initializes it with zero
@@ -11,7 +11,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	void *p;
 	unsigned int i;
 
 	if (nmemb == NULL || size == NULL)
