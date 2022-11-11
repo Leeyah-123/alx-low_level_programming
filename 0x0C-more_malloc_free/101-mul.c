@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 
 /**
  * _is_zero - determines if any number is zero
@@ -83,7 +86,7 @@ int main(int argc, int *argv[])
 	int ln1, ln2, lnout, add, addl, i, j, k, ca;
 	char *nout;
 
-	if (argc != 8)
+	if (argc != 3)
 		printf("Error\n"), exit(98);
 	ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
 	_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
