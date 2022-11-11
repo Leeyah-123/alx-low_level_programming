@@ -81,7 +81,7 @@ int _checknum(char *argv[], int n)
  * Return: Product of two numbers
  */
 
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int ln1, ln2, lnout, add, addl, i, j, k, ca;
 	char *nout;
