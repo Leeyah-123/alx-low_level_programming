@@ -60,9 +60,11 @@ void print_string(va_list args)
 
 	string = va_arg(args, char *);
 	if (string == NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", string);
+		return;
+	}
+	printf("%s", string);
 }
 
 /**
@@ -76,7 +78,6 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0, j = 0;
-
 	types t[] = {
 		{'c', print_char},
 		{'i', print_int},
