@@ -11,10 +11,7 @@
 
 void print_char(va_list args)
 {
-	char arg;
-
-	arg = va_arg(args, int);
-	printf("%c", arg);
+	printf("%c", va_arg(args, int));
 }
 
 /**
@@ -26,10 +23,7 @@ void print_char(va_list args)
 
 void print_int(va_list args)
 {
-	int arg;
-
-	arg = va_arg(args, int);
-	printf("%d", arg);
+	printf("%d", va_arg(args, int));
 }
 
 /**
