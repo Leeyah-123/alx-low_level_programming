@@ -78,25 +78,22 @@ void print_all(const char * const format, ...)
 		{'f', print_float},
 		{'s', print_string}
 	};
-	int flag;
+	char *separator = "";
 
 	va_start(args, format);
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
-		flag = 0;
-		while (j < 4)
-		{
-			if (format[i] == t[j].type)
-			{
-				t[j].func(args);
-				flag = 1;
-			}
+		while (j < 4 && (format[i] != t[j].type))
 			j++;
+
+		if (j < 4)
+		{
+			printf("%s", separator);
+			t[j].func(args);
+			separator = ", ";
 		}
 
-		if (format[i + 1] && flag == 1)
-			printf(", ");
 		i++;
 	}
 
