@@ -19,15 +19,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		printf("%s", va_arg(strings, char *));
 
-		if (i + 1 == n)
-		{
-			printf("\n");
-			continue;
-		}
-
-		if (seperator != NULL)
-			printf("%s", seperator);
+		if (separator != NULL)
+			printf("%s", separator);
 	}
 
+	printf("\n");
 	va_end(strings);
 }
