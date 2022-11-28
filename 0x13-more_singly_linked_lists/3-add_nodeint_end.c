@@ -19,14 +19,14 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	new_node->n = n;
 	new_node->next = NULL;
-	for (i = 0; *(head) != NULL; i++)
+	for (i = 0; *head != NULL; i++)
 	{
-		if (*(head)->next == NULL)
+		if ((*head)->next == NULL)
 		{
-			*(head)->next = new_node;
+			(*head)->next = new_node;
 			*head = new_node;
 		}
-		*(head) = *(head)->next;
+		*head = (*head)->next;
 	}
 
 	return (*head);
