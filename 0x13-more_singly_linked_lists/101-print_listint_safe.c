@@ -1,13 +1,13 @@
 #include "lists.h"
 
 /**
- * free_list - frees a linked list
+ * free_listp - frees a linked list
  * @head: Head of list
  *
  * Return: void
  */
 
-void free_list(listp_t **head)
+void free_listp(listp_t **head)
 {
 	listp_t *temp, *curr;
 
