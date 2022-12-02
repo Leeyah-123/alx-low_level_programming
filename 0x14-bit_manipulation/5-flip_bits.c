@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * flip_bits - Returns the number of bits to flip to get from one number to another
+ * flip_bits - Returns the number of bits to flip
+ * to get from one number to another
  * @n: Integer
  * @m: Integer
  * Return: Number of bits to be flipped
